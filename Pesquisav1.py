@@ -1,31 +1,43 @@
-#Inicio
+#INICIO
 
-print(" Pesquisa de satistação TudoWeb ")
-total_entrevistados = int(input(" Digite o número total de entrevistados desejado: "))
-Quantidade_excelente = 0
-Quantidade_bom = 0
-quantidade_ruim = 0
+#TOTAL DE ENTREVISTADOS
 
-#Laço de repetição
+TOTAL_ENTREVISTADOS = int(input(" Número total de entrevistados desejados")) 
+QUANTIDADE_EXCELENTE = 0
+QUANTIDADE_BOM = 0
+QUANTIDADE_RUIM = 0
 
-for i in range(total_entrevistados):
-    print(f" Entrevistados {i + 1} de {total_entrevistados}")
-    nome = input(" Digite seu nome: ")
-    idade = input(" Digite sua idade: ")
-    print("Opiniões sobre o atendimento")
-    print("1: Excelente")
-    print("2: Bom")
-    print("3: Ruim")
+print(" Pesquisa de Satisfação TudoWeb ")
 
-    opinião = int(input(" Digite o número correspondente a sua opinião (1, 2 ou 3): "))
-    if opinião == '1':
-        Quantidade_excelente += 1
-    elif opinião == '2':
-        Quantidade_bom += 1
-    elif opinião == '3':
-        quantidade_ruim += 1
+#ESTRUTURA DE REPETIÇÃO
 
-    total_respostas = i + 1
-    print(f" Quantidade de respostas 'excelente': {Quantidade_excelente}")
-    print(f" Quantidade de respostas 'Bom': {Quantidade_bom}")
-    print(f" Quantidade de respostas 'Ruim': {quantidade_ruim}")
+for i in range(TOTAL_ENTREVISTADOS):  # Confesso que não entendi muito bem como usar a estrutura for
+    print(F" Entrevistado {i + 1} de {TOTAL_ENTREVISTADOS}") # Ainda não entendi 100%, mas ficou funcional
+
+#COLETA DE DADOS
+
+    NOME = input("Digite o nome: ")
+    IDADE = input(" Digite sua idade: ")
+
+    print("Opiniões sobre o atendimento: ")
+    print(" 1: Excelente")
+    print(" 2: Bom")
+    print(" 3: Ruim")
+
+#Lê a opinião em texto e converte para número
+
+    OPINIAO = int(input(" Digite o número correspondente a opinião ( 1, 2 ou 3):"))
+
+    if OPINIAO == 1:
+        QUANTIDADE_EXCELENTE += 1
+    elif OPINIAO == 2:
+        QUANTIDADE_BOM += 1
+    elif OPINIAO == 3:
+     QUANTIDADE_RUIM += 1
+
+#RESULTADOS FINAIS
+
+print(" Resultados da pesquisa TudoWeb ")
+print(f" Quantidade de respostas 'Excelente': {QUANTIDADE_EXCELENTE}")
+print(f" Quantidade de respostas 'Bom': {QUANTIDADE_BOM}")
+print(f" Quantida de respostas 'Ruim': {QUANTIDADE_RUIM}")
